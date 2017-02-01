@@ -1,0 +1,247 @@
+img {
+	max-width: 100%;
+	min-height: 100%;
+}
+.no-js .title-bar {
+	display: none;
+}
+
+.ba-main-menu {
+	margin-top: 25px;
+	a {
+		color: #000000;
+		font-size: 16px;
+		font-weight: 700;
+		&:hover {
+			color:#5a477d;
+		}
+	}
+	@include breakpoint(medium down) {
+		margin-top: 0;
+	}
+}
+
+
+[data-responsive-toggle] {
+	@include breakpoint(medium down) {
+		display: none;
+	}
+}
+
+.ba-slider {
+	&__slide{
+		background: url(../img/slider.jpg) 50% no-repeat;
+		background-size: cover;
+		min-height: 100vh;
+		outline: none;
+		.ba-cover{
+			background-color:  rgba(0, 0, 0, 0.8);
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+	}
+	&__title {
+		color:  #fefefe;
+		font-size: 50px;
+		font-weight: 400;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+	&__par {
+		color:  #fefefe;
+		font-size: 18px;
+		font-weight: 300;
+		margin-bottom: 60px;
+
+	}
+	&__book {
+		font-family:$header-font-family;
+		color:  #ffffff;
+		font-size: 25px;
+		font-weight: 400;
+		background-color:  $primary-color;
+		padding: 15px 30px;
+		&:hover {
+			box-shadow:0 0 10px 2px #ffffff;
+			transition: ease .3s;
+		}
+		i {
+			padding-left: 50px;
+			color:  #ffffff;
+			font-size: 25px;
+			font-weight: 400;
+			&:hover {
+				transform: translateX(5px);
+				transition: ease .3s;
+			}
+		}
+	}
+
+	.ba-scroll  {
+		font-family: $header-font-family;
+		color:  #ffffff;
+		font-size: 25px;
+		font-style: italic;
+		position: absolute;
+		bottom: 40px;
+		right: 100px;
+	}
+	//<!-- ¯\_(ツ)_/¯ -->
+	.slick-dots{
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		list-style: none;
+		left: 100px;
+		bottom: 40px;
+		text-align: center;
+		/* @include breakpoint(medium down) {
+			position: absolute;
+			left: 50%;
+		} */
+		li{
+			display: inline-block;
+			margin-right: 30px;
+			button{
+				border: none;
+				font-size: 0;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background: rgba(#fff, .8);
+				margin: 0 5px;
+				&:hover{
+					opacity: .9;
+				}
+			}
+			&.slick-active button {
+				background-color: transparent;
+				border: 2px solid #ffffff;
+			}
+		}
+	}
+}
+.book-now {
+	position: relative;
+	bottom: 100px;
+	margin: auto;
+	max-width: 700px;
+	text-align: center;
+	background-color: #ffffff;
+	box-shadow:0 0 10px 5px rgba(0,0,0,0.5);
+	@include breakpoint(medium down) {
+		position: relative;
+		bottom: 0;
+		margin-bottom: 50px;
+	}
+	&__title {
+		font-family:$header-font-family;
+		color:  #000000;
+		font-size: 40px;
+		font-weight: 400;
+	}
+	p {
+		color:  #808080;
+		font-size: 16px;
+		font-weight: 300;
+	}
+}
+
+.ba-section {
+	margin-bottom: 100px;
+	&__title {
+		color:  #000000;
+		font-size: 50px;
+		font-weight: 400;
+		margin: 40px 0;
+	}
+}
+.ba-slider_2 {
+
+	&__slide{
+		outline: none;
+	}
+	&__title {
+		color:  $black;
+		font-size: 50px;
+		font-weight: 400;
+		text-transform: uppercase;
+		margin: 50px 0;
+	}
+	&__par {
+		color:  #808080;
+		font-size: 14px;
+		font-weight: 300;
+		padding-bottom: 100px;
+	}
+	.button {
+		font-family:$header-font-family;
+		color:  #ffffff;
+		font-size: 25px;
+		font-weight: 400;
+		background-color:  $primary-color;
+		padding: 15px 30px;
+	}
+	.slick-dots {
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		list-style: none;
+		left: 100px;
+		top: 10px;
+		left: 50%;
+		text-align: center;
+		li{
+			display: inline-block;
+			margin-right: 30px;
+			button{
+				border: none;
+				font-size: 0;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background: $primary-color;
+				margin: 0 5px;
+				&:hover{
+					opacity: .9;
+				}
+				&.slick-active button {
+					border: 3px solid $primary-color;
+					background-color: #fff;
+
+				}
+			}
+		}
+	}
+
+	.slick-next {
+		position: absolute;
+		bottom: 0;
+		left: 600px;
+	}
+	.slick-prev {
+		position: absolute;
+		bottom: 0;
+		right: 420px;
+		z-index: 10;
+	}
+}
+.activities {
+	position: relative;
+	display: inline-block;
+	.ba-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.75);
+		opacity: 0;
+		transition: opacity .3s ease-in;
+	}
+.activities:hover .ba-overlay  {
+	opacity: 1;
+	}
+}
